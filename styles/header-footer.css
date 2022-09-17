@@ -1,0 +1,40 @@
+/*Header only*/
+header {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(0, 212, 0);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#navbar {
+  height: 100%;
+  padding: 0 20px;
+}
+#navbar * {
+  display: flex;
+  position: relative;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.nav a.link {
+  font-size: 23px;
+  font-weight: 500;
+  padding: 0 10px;
+  height: 50px;
+  align-items: center;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: background-color 0.2s;
+}
+.nav a.link:hover {
+  background-color: rgb(69, 69, 69);
+}
+/*Header ends here*/
+

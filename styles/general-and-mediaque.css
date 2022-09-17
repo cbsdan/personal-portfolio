@@ -1,0 +1,136 @@
+/*general styles*/
+* {
+  box-sizing: border-box !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, Poppins, sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+/*general styles ends here*/
+
+/*media queries*/
+@media screen and (max-width: 350px) {
+  .nav a.link {
+    font-size: 18px;
+    padding: calc(10px - 3px);
+  }
+  #welcome-section h1{
+    font-size: calc(50px - 10px);
+  }
+  #contact h1 {
+    font-size: calc(40px - 7px);
+  }
+  #about-me {
+    font-size: calc(25px - 5px);
+  }
+  #contact p {
+    font-size: calc(18px - 2px);
+  }
+  #work h2 {
+    font-size: calc(30px - 5px);
+  }
+  #profile-link-container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 850px){
+  body {
+    padding-top: calc(50px + 10px)
+  }
+  header{
+    height: calc(50px + 10px);
+  }
+  .nav a.link {
+    height: calc(50px + 10px);
+    font-size: calc(23px + 5px);
+    padding: calc(10px + 5px);
+  }
+  #welcome-section h1{
+    font-size: calc(50px + 10px);
+  }
+  #contact p {
+    font-size: calc(40px + 10px);
+  }
+  #about-me {
+    font-size: calc(25px + 5px);
+  }
+  #contact p {
+    font-size: calc(18px + 3px);
+  }
+  #work h2 {
+    font-size: calc(30px + 5px);
+  }
+}
+
+@media screen and (min-width: 851px) {
+  body {
+    padding-top: calc(50px + 10px + 10px);
+  }
+  header{
+    height: calc(50px + 10px + 10px);
+  }
+  .nav a.link {
+    height: calc(50px + 10px + 10px);
+    font-size: calc(23px + 5px + 3px);
+    padding: calc(10px + 5px + 5px);
+  }
+  #welcome-section h1 {
+    font-size: calc(50px + 10px + 10px);
+  }
+  #contact h1 {
+    font-size: calc(40px + 10px + 10px);
+  }
+  #about-me {
+    font-size: calc(25px + 5px + 5px);
+  } 
+  #contact p {
+    font-size: calc(18px + 3px + 3px);
+  }
+  #work h2 {
+    font-size: calc(30px + 5px + 5px);
+  }
+}
+
+/*media queries end here*/
+
+/*media queries for projects*/
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  #projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-content: space-between;
+  }
+  .project-link {
+    flex-basis: 48%;
+  }
+}
+@media screen and (min-width: 1001px) {
+  #projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-content: space-between;
+  }
+  .project-link {
+    flex-basis: 31%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer-info {
+    justify-content: center;
+    text-align: center;
+  }
+}

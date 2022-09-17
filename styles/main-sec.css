@@ -7,7 +7,7 @@ main * {
 section {
   overflow-x: auto;
   height: 100vh;
-  padding: 0 50px 0 30px;
+  padding: 0 30px;
   width: 100%;
   
 }
@@ -117,7 +117,7 @@ span.project-hover {
 }
 #contact p {
   margin: 0 auto;
-  font-size: 22px;
+  font-size: 18px;
 }
 #contact p i {
   color: rgb(0, 212, 0);

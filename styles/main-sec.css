@@ -25,7 +25,7 @@ section * {
 #welcome-section h1 {
   color: rgb(223, 223, 223);
   font-size: 50px;
-  margin: 0 0 10px;
+  margin: -50px 0 10px;
 }
 #about-me {
   color:rgb(0, 212, 0);

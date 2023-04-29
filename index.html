@@ -4,102 +4,136 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="styles/header-footer.css">
-  <link rel="stylesheet" href="styles/main-sec.css">
-  <link rel="stylesheet" href="styles/general-and-mediaque.css">
-  
-  <!--Icons-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
-
-  <!--Fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!--Header. Fixed position. Navigation-->
+
+  <!--Header & Navigations-->
   <header>
-    <nav id="navbar">
-      <ul>
-        <li class="nav"><a href="#welcome-section" class="link">About</a></li>
-        <li class="nav"><a href="#work" class="link">Work</a></li>
-        <li class="nav"><a href="#contact" class="link">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <button id="menu"><i class="fa-solid fa-bars"></i></button>
+
+      <div class="label-cont">
+        <h3 id="dev">cbsdan</h3>
+      </div>
+
+
+      <nav>
+        <ul>
+          <li data-tab-target="#home" class="tab active">Home</li>
+          <li data-tab-target="#projects" class="tab">Projects</li>
+          <li data-tab-target="#about" class="tab">About</li>
+        </ul>
+      </nav>
+
+      <!--Menu tab-->
+      <nav class="navMenu hidden">
+        <ul>
+          <li data-tab-target="#home" class="menu-tab">Home</li>
+          <li data-tab-target="#projects" class="menu-tab">Projects</li>
+          <li data-tab-target="#about" class="menu-tab active">About</li>
+        </ul>
+      </nav>
+
+    </div>
   </header>
 
-  <!--Main Content. Three section-->
-  <main id="main">
-    <section id="welcome-section">
-      <h1>Hi, I am Daniel</h1>
-      <p id="about-me"><i>a web developer</i></p>
-    </section>
-    <section id="work">
-      <h2>These are some of my works</h2>
-      <hr>
-      <div id="projects">
-        <a href="" class="project-link">
-          <img src="https://lh3.googleusercontent.com/fife/AAbDypBs1x_Xg_S7dBwG6ByyLOUcl3EnZiAqxUT-Ubi3vq02567FDVH25K6kcgZPaUkF6Y2Webe9YsoLonDlhUrEwZx4EXyid4ymQkzlteT6ejNssicEXtPX-mC5nBTYICI2d7R5r1fU58snPdFNJKNkhi4ZSds5ndMcCwApX5F9XXAoHkZYaKlZO3ZW6UFCrxSmtbKzXzceKw8VRBtaeE8hD8uGsRphV_yEHObPj6eOwf_WW6h-K9z4nUTvtDsoetndNOZ1vXhjMug0OgbZ0HhQOq0-jlAf1JQ7eEXFuTzdAJDa-1v_YKLziX05xyG0FOnU9nz3pzK78XdY5asfgOeQpVtS5h1BFtOmtYQ18u4gsZUzgxJm2OTlhF-m3YZbO6tHwdw93C1VRNa4zrkhZahMTbiHx8LfWR__DDg42NMSoWk6cZTCg4Jj7iVNn4Yee7l6ZSDDL__FigLQtPNsS4i2GBLMKvaruNg3elzDSpNouo-e2rPKsQlH4rBJIu6unmLjmw9kKu4FUlVM_YTvDx7u0CZjFCBAX-7RZUzfhYxmKYsZ6_ABOhBhqliK9d4CcQP_eTyWlqkqhAGYHoWAd_KQzaXjk1FxZMFIIQPA7obiq4_2gn1809RBvkiToi6cYDe9XVpUWXZlr7rmVDSbFl7z8WrTlDhD74k-EMjhM-kb9rNh46qoGLEYPhS30XazUs-y0KDlPsYQU1XxqejwqnFvuqce8cUF7zKGdShIqyy7Ti8XdDdZzkHH61JrY3t_Csxm96dnInCgxyFWmnjQERm7NmfZNPI9EuGmZzf2htHmCKikWw5WcSEsv1x7iBzI7kSoXFQAl3Sd-PeHKnZ2jCV10jFTtO2W6y4b8W-PzpVVXl9sgArHJJcDDO_cwLsUENkNoa2rJPqzXr722ejezk9nWblyQqf9xcdj_2nZEhe19mF5iwNqV4K-G7f1EAKwYJzFo47XIAdiZtU_OQEMs5cb3TkLjjeQWGRQX8qcGIZP8B-4_KAKK7oAhy97ZoPFjdWxHsOghsZ6tMag_a3uqhJ6ztg-EM-QEvxD4d2OnZkQWvCdmFdIsk26MnjwDRKc3g4LOoRnxxmVQVLfilOqMuF2RwDNz5F3Xbcv_aqogUhA_i96V__-N5czh5izPpD3QafdKeDdIPpd3L0gKxW5LsMbt-toctWXiAHxRYjmh9HeUFAjtO-zpD46N9-jLH7oBJOajItwo_JLtfKYAHblmrNDRnrEE52KwI3pPxMYd0T_VFYcv4i5fj-QoQ5O6i4I1-TgreGNx20ky0cPCJU50BPoS0rHd6fRv9vopg=w1365-h624" alt="survey-form-img" class="project-img">
-          <figcaption class="project-title"><span class="project-hover"><i class="fa-solid fa-less-than"></i>&nbsp;</span>Survey Form<span class="project-hover">&nbsp;/<i class="fa-solid fa-greater-than"></i></span></figcaption>
-        </a>
-        <a href="" class="project-link">
-          <img src="https://lh3.googleusercontent.com/fife/AAbDypCk17TN168DT6Ci407ETa-Gamnq5wxR6IP0PCHT3_ZEQ0moJl0UoiU-0zGBt3QHRKXeES879wZ9Z0vA328nYJiVsM7xJw_a-6zDJhUhyhpT855zP4Q5nEDDZspKxjlLY5Al_9ZC2OjiHniAWie8Ul49cAdsonMYa2hkyPmEtzAaZqhfrbdigwoHSZgN0yWZ0xVZTCpRq1Cij6R76dPVRCYP61deFMTCwAFHc6pmxKIM04DB4YAE2kuGrKPCKPo1YypV0DlkyesVYgMmSaVvJ9E5L-g3eMdH1fyhNFJWaHoMs0aHFQ8b_Ic98hCSJZJG9pNbumjWqi6JUzZMrqqyj6EtnSi9AIP-_HxUdC56hBMfzOQad6chovc9ESQOnLL62Kmwoh30VytsdL1nqj3Jh0p4RkF8ffWUrMOTK28_nMaSRd174Z1E5UMV_VmiQXuG7Es5As-T_X8TgwvLf8nyZFUa0Rc6NJSypl_E9au3BSCSJSdX9fLDaWDzf1h0Fuz8-2L7fez08GgTF_fthBk-Chi3HcGJT94c8VoRaje5YZ9AvYYvShK4e6rYrMzY_PDTPzCH9E1Gyd-S6datWYAgyFFCpNeI_NBZ2_pDBY55LibobRfdlQ7W8PFvXlOqLMAixrUP2eCr66u4Hy7t7qc9FQqWBy8ZdldXHIDIzIzQNnSh9aPgZnknEhKkx_3uICQw-dftfRVSZwLPxp_5j4kwBUp3urMLoIGZKDEmGkI0nGSWFd8wGmwsioKsKZUq9D3i_LiJJN72Zi_MdNQxybDv1F2YAx2BlBiuRLXVE8Iaj5r-FSy78pXUplm3oSeYEh3rpoUL7iWiGBOVBFYMFRTxa3Xi7adMyQgIuLYHdorzcg_SxUXeehGzzkKjpv9IxyWPdhIL0nN3dFwCmexvtaiLEPX9zTT9KsG58LpzqqrP_UXYuiXR3qw7YqIUBrDq0XOT4Ou_C4ODLJAnKIRw2BNU-NrSiuYf9GbuvrRVRjjgGcK1IZNaYQjZXVkwijnqJgbqP1XPrPIfBUTzAvjq9PCoO7sj_a3C4lzpuUXH3LzBA79iD8_dVrEQYd4ReMqbfJHCx-K0XUuWel70lWl6_OCoOjPem8VFwsCZVQHf-7R_zlnQS3rq9oI6z7fkMZqEwTZIvJpg-RquG1Z53ecoCKIFcSyDFKgJ5-zfOUzGRNUNLJv8UlsTiPHeez3leUZXNOY7i3zLErkEq-iYNIRmO_32R_IY7EoPnfsPqQmTfarpqxIGN4dJzzcqOypH4O-asBKsFIJ5uuIMibr-0F-ocBoR8TS1dN_xiwScgw=w1365-h624" alt="tribute-page-img" class="project-img">
-          <figcaption class="project-title"><span class="project-hover"><i class="fa-solid fa-less-than"></i>&nbsp;</span>Tribute Page<span class="project-hover">&nbsp;/<i class="fa-solid fa-greater-than"></i></span></figcaption>
-        </a>
-        <a href="" class="project-link">
-          <img src="https://lh3.googleusercontent.com/fife/AAbDypDmW8VDGm1TwzteGIl9mQ4Yxt4iRsZ5T1Moy3zYcg8F4Qo9Re2_WxKyMp3M4TmH5xSD-QWl00p1RBG_5sHuhDevf3Zoq1yqb_xQA3oUZ4GonEZjfaQBVP1W8qnkzctO9SuJVegeHC14dxQQWhdd7MI9nG8DDlo_BR5wzPi2BAOi7ltpuNX9JxTLUkK1-MalmYHQmtANgq-3ygk359x2t-wT7FydBXBJia0bySpi_fg9uqdXDwuBHuz14eYMU4bNdl97zizzb0OMqkJirw0E3FPnE5smgpvlnMGgPPpD1WDLAVvdwaBit7TG41kwW72-t03Z_1iNqSaoOdaKtA68OZziK3XcMawD0n_GVEsgLkSsqGJ5dTpk0Oh6na_0MnAMUHTmWVwZr4NLd_QOH5lN7txwNmEXfvHuPO7jUxlC2IiV2DE0CHamp4oP2ZXdCrzLOq-QYfKfYIkcqrO-ULx6C1r3yd1o4fWuSX3HkAZhCQ6GJeuxZxHh8mQJrqAXNqHEe5DNEIyXrrGJWRQm43ed-xlF0ov-3YP_TKzpp8dWhfAKreF5wvnL0f8_nrbflNODXkiD7d8gaVtuaWvdK-4nnrfwHI0VdU10wlfoFB6I23HszlY7h655eb8LtyBQ2WbLdp1Ywpeneci6M4fkwxlkY3Ugw_AQTF3ZWespsKePeIUF_ntDoi_a-7bcujOIouz7XaNBuwSTS-AahDzLjTLTIYc8JfyqJABvbK25ojRYz7E5h6ZEI-rPKAfBdvJP2cfigTUCVR1cWEj4deWwSO-p-Zpig8_kdrDs4ETPPlPdcGeJWTirMq6rvFquQUACi2xFM1o9xtkotLMsDHxlDJk39p089jrEzgAl1JC1VvQKadZNgcc40e3O1K1oVkHn1Ae31CEPn7bKAgCfjgDtXZa95rVAjfdBwI0BZckFP5LXIt8CZu5eu2neuG7Re-5Cy7sn8bNszZ1XHI33OVuHl4QD1nIZ1F89jskaQUKDR8WcGzjSY71mOz3wOpP_1qmNQ2FIDPo21qGqbtN3LxfL9GzNv5okYdVf7AcFu-Q__HEXHFKzHAGp0qWJiNnMrmW5gUF7x6h1daXnf01ZpoD0TyExGuAtKgfWKMJKnC3XV9yWhpiR_SKMsjtZKe6wsz78lAGNGsEAwoRXZNOR1ITWcjIbnEJaOEOXaUcCH5DUdr5GASCZzauritpmr3Az-K9NBsXGGNeB9_0ssZjsVvhWJY5f49IpgkvOXGs12lR7WLhIQ24Wn0r4WpmR8pg3eg_QW7rOSiTtsoBAtWrpptf7kibaSCuj0m-QvWNmQVI0ZHhOEBsAKWLibZrMXEcbD23eyXpVWLtKa01EaFYRygh28eW747RTQXByd6ONsELb0Q8n2cdceOM7nxoOay9Ysm4ZnfgTqkE1EgAFveSrqtgVInXSkjfupIYHacY3bpiM5bE4qChOVVMLxEEoPqZZ1dfKPdOWtmJ2x3RPaU1g=w1114-h624" alt="documentation-page-img" class="project-img">
-          <figcaption class="project-title"><span class="project-hover"><i class="fa-solid fa-less-than"></i>&nbsp;</span>Documentation Page<span class="project-hover">&nbsp;/<i class="fa-solid fa-greater-than"></i></span></figcaption>
-        </a>
-        <a href="" class="project-link">
-          <img src="https://lh3.googleusercontent.com/fife/AAbDypCRpsuloJRrdfwnAdwqsVwoTfKvQQJQY-Kot573hKj12Zwmpo2kFTOmAPwIkNL1yP9I0EnH-g8v9XZNVfNK8e4VvplNxBPPom8k0rcq-qZEF_sqQWjvvkU0DciATzDcgn42Pdg20k539qBOJM7Tsl-fwxVVaxIR5_5ipvb4IVhqcFIdtfsrWZcFslBG_eRLWlXqOv1tqgJf7vjT87WQvrJZxDqgeqbWpGI-Ah5ks_YJuCoZ0a35MDeEJCdyZiwTtZL2RcE6E1BM5UV0Y7jP2_4gIf8uh3UuDv6bryDOujenHfL3miTHv0DKM_63IbMnBgJfnoVPXDND-2F02PHFk_UW0XOZEcMKzAhnaWKWXQFJNBZhIFjMDJbD974Xfhdm1R5Hf7u6usieyQ02727Tqjn2MWpVCReW8bUczhc4m_kIqdRk5J4WBnmTk_8-3geKl204IRdxP7C9Mt_UEKA-Yt-YX43SwTqYD4VDjwvdxHA9tdXZtBTYnEcA4H3DYdARpYh5UV9cQ5Ombad7U7RrEIaOSlvTWbi9NQWuLQRfRvCYFNYaLv3ABlFHWKCGN7JwdD-Olz9RlXPhBTMQeJhN5VeRW8TemnW6Gz-cIsf5OmQDW_Vz45MggsjqneYcqhIt1MCGxqvDzXI87NoV-wYiG6SdlioktprqiaSX3XeOrPft5YDgP5ujJJlvlcI8kr6wJqcFc64Rn0WhRlo_zuIZcWL9M1qObiRgI8Om3pv5vpIQdLjJzTucA6eVSsL_Avu73Rdx9kolM6lUekJ8ehxJAv7HVYC_-0j4vOmr-fR3tomojoIfon4kBvfPZhfaeZFN9KwoZ_ZBaDf1extT-vpXl_-_RcMMfQtjbAQ19keWQyQZjHFXx38zrGTJZ2UfQzcdjHg-Bf1MKvA8FvYH2pl2VWKg8aYZ-KhvL-yYsBgUY2gCvHtMNWAHCKs4cEqrMSrTuU5PbC9wvtKWWFvj3RBWBgvtrvVC3KS4Dk_n_Jgb4F3n_m9UsNlx8ALpMHw-W5iIxrQYYbtNOKgyCY0NOZUYPjB_FF_XowuI4SfsOjr1bbAwcd2xo_R45a5oEuW1CTRDBBCq96sVKPRMALdbmrioBS9qOO30Qk52AqQeDvjHMVLgsSr-nlHulnlP-hlxs3IzmzVa27kD6Vw5lvySceKsevBxYbqYX9wTpZZ9DlJGo-pqQTQoozN3z518sRThacRd4Q1WtPzYpdZeuy0C4nln67TlegLTClSj5IwNJd6CVUT9I5yfHXi1l5-6JKBntJ1DS5JrmK5lj7O-e6jRhDu8ErWq9UEgMzWgNg=w1114-h624" alt="menu-list-img" class="project-img">
-          <figcaption class="project-title"><span class="project-hover"><i class="fa-solid fa-less-than"></i>&nbsp;</span>Menu List<span class="project-hover">&nbsp;/<i class="fa-solid fa-greater-than"></i></span></figcaption>
-        </a>
-        <a href="" class="project-link">
-          <img src="https://lh3.googleusercontent.com/fife/AAbDypCzmnq-7mAJA3f6M40POg-cblMt73O8Wc8lCOsqtj73WEkocSP_Zb3gSVg1nkUBWR3WmtgtUIWH1o7pJ39Cclf6HWZSHKCmy7ncpU7Ys6hH7C55SFz3Bq52XS2t1S_Pmo0Tne0UNR7dhyPS3LDCClc5gI8825zs_4VTrUZkxlt5-fNo1SXckHZ0Ah21yH0aZiiB5ueiaSw6qMvAZS3Fx5JGRbp-y0JQCPCJHnqq3Ut8tQWVH7Xg58dzFNetrrcXAiR_VSK84tW-d-07nm3SqSLgDrzRlUABVXIbUbWKv2BP1NakWGWT3up2nSegzWPW6FGw16DmKlywc57ZC8UMA8N_8Z7XtuqVMszr_eeUoAwjdR3Gt2LaYrDON3JmGFX9qDAzMI9_XmFNAfqX857x8Vyq7vNhvSnJwC5Ym2jflVDR07Xn5bdEiXxrXwxiLLapoXpqLYYw_xvivCuAtpx-obDswZ79LOcTONW3Tr-ZmaSxAXHCrkbAzbRw6Kq_1sTmOMl9WKe9sVULBo8aB1dlx1kltvto6nXuZ2wokrIFodjjKU1UlrokGuDPlBTJB1dvn4vpMdgdz-96flQ1yHK8Fg568wjmAZl8SohVRF1tYYbgdjaNVlrEDEqNQtp8UEDMHwmEyI-Htc0p7Ce7R2MwPYHiGr6bYV7NSXzdGnrDWdTWKeKKHKB_WBH8JJUzJL8zCky5rcZ4BI2tf5T3PfS3WfZ7mhpgi_VVtE7T3_YVfvbE72z75TGVpVxRMq8HgOSQNp_42P-7dIQRPBEmqYBqcKGQKoGtuoD3FUh5ljIOb5nLg-R64rFDNtioQaz_vt0De_NzwW47V8RSKtSNxpGOZV0DAYIedLiYSk0_rFm86YnnXt63IbHW_g1By-WyfCDAQ3tee2RRg7vpnTiOMRQuYglvovEhazC1SyuVpNs9-YJn6KvgZW9CMlIv59rAIew480h6o-OSLYr-15munYQTXUXX0bnGKVkC5hAfPLYcwxOschJVZwaVuMNsvi1yaQ4fMu5qUcHKQl5J7Hs7p3hA6XSbK3ihoj3Bor9iZ-YHsYSOVFdIa5Qjm_eHtXSwQkeSGsoJovGZKRDjEtou9_v1HeKIcDR7xK3RGt38QiAYEfZUaJcR8LNx2fSgjx7Z77SdeH0Or024V9-2mLru8g8QQ7OGgyvK5aYD1cGJ7bD6lwhyVNmtl6yf87ZPnJDcdX3YrqBcOzOpANZuCioHJ31r0_v5MHfdgLhApEo7Mc8FW_1ebNbYo8uBEMhV-hQ9lLJZpN3CDGu3Qf7tgyg5igNFV7INf3AmxVn8sA=w1114-h624" alt="city-skyline-img" class="project-img">
-          <figcaption class="project-title"><span class="project-hover"><i class="fa-solid fa-less-than"></i>&nbsp;</span>City Skyline<span class="project-hover">&nbsp;/<i class="fa-solid fa-greater-than"></i></span></figcaption>
-        </a>
-        <a href="" class="project-link">
-          <img src="https://lh3.googleusercontent.com/fife/AAbDypDWFQtgxkP0dBGm8ms1ZFbI1FmCBrF_VDmotataHW8-YUBkf3-BNbCagWMSDQuUAFN2KfEu24tFCGDmZNazRQ3MiaR7KAl3HrIG2HrQHooaAsqJk5Fytq9_I1Et81rnajFe024HcH2DF9gkwNz7Q-2-fE9SaPsofNGEyg9mNYl8aUDGBVfNCR4GnhusCR2-dDY0T2z1oegpqg5pqEa8xiQN7iO0ziScBNqdkMpwsaqyB8ce_5SVwAdyLEJg43AXXJhqZ_baSHe72aMheYN6GPbNnFzKir33sS-kaZU56tKbQChVdrskG7Dgn-sX8YLz5chwp_Grh6JzPjXU2J8Ag-Pmqua8kqinS_RL4Eyhu5fxzGSMAPEHC4v8c-bErzzWGhgomgaFJi8bRXyNeLWqKfePnUYxU2XveWFjitS-h4S4xRrIwQEj3UeZOOK-GpVCs5-3E7I7YEb09EJO6d6oHcYICGuiqpSbdT6Llc--PAkr5wKXpMZDMKFD0CJM3bXva1oHVodOxYDC-OhNDftpFhCmJk0DAJSNI5vv-598i9uCgOI6ZIYX3iqfcgNTTfE1RF7tfQT3T1Af8VgOOfx1esRWDZAC4oTLEEXMQ-kcobWwYWsgYeP84Ui-CnJY0NXvIWd5EDFj2690xlmaSrvnaelYkID_1w9l6hBvJYoTw2EwZ-Dk7d6OtxLoJvwMkYlB2jsnhDJJ40_4IwFdujRsxSUp6VmNoj9QNw9AwiFLW7FLvHtVnpqg52T937rVJ6xBBS59pv4OY5KfjGEpIDH0q0gQngr7eo4gzqJVrBbVZDDpZfy_J42IksXB-QZ3OtqIT5cv2WXl_pS_pf8plEIJNeoqXwNMTXgogQQvOfycQBguOXwTnPKZBkT7qzXhZnr8VShdUMcdLLLVWLCXIqUbulCwuT3nsQm5VXLoMA5POZc4mea5ihKfRhdrzuGV-dJYYj-EKjVMc5rzDqSc9gl6j7E1ZkptauL_sjKOc9NSte7XZNjZRrwH9mmzHuLAGK5siaLZbTSvHntJmq9x7PT4OkFuOeWs2VNduHYbBwN3qFPiYFGEm8l7U-8QIAhbBcfrR6CxF06Cbf_XtvkMGGTeX5dmo_CzJ9StaOCSbf5yijv4GzdkELdesiY9-k9C4sH2dxJWudPR52IUjMpOPHSHYkk-o8ikGJ-I6t0czEhi29dXpifzjYhIenCxfL7O4dgnsSDRtdedCFBUA0mor0w8nqTgle8p9NgCrNJAoUiDXjVWhfml9BOJrtI0sX0Adpl1I5_aV-fPvrQRbS2OqyVgCwx0w2wPC-OwkA=w1365-h624" alt="penguin-hand-animation-img" class="project-img">
-          <figcaption class="project-title"><span class="project-hover"><i class="fa-solid fa-less-than"></i>&nbsp;</span>Penguin Hand Animation<span class="project-hover">&nbsp;/<i class="fa-solid fa-greater-than"></i></span></figcaption>
-        </a>
-      </div>
-    </section>
-    <section id="contact">
-      <h1>Let's work together...</h1>
-      <p><i>How's your day?</i></p>
-      <div id="profile-link-container">
-        <div class="link-container">
-          <i class="fa-brands fa-square-facebook logo"></i>
-          <a href="https://www.facebook.com/daniel.cabasa.14" target="_blank" class="link" id="profile-link">Facebook</a>
-        </div>
-        <div class="link-container">
-          <i class="fa-brands fa-instagram logo"></i>
-          <a href="https://www.instagram.com/danri028/" target="_blank" class="link">Instagram</a>
-        </div>
-        <div class="link-container">
-          <i class="fa-brands fa-github logo"></i>
-          <a href="https://github.com/Daniel028" target="_blank" class="link">GitHub</a>
-        </div>
-        <div class="link-container">
-          <i class="fa-solid fa-envelope logo"></i>
-          <a href="mailto: cabasadaniel1@gmail.com" target="_blank" class="link">Email</a>
-        </div>
-        <div class="link-container">
-          <i class="fa-solid fa-mobile logo"></i>
-          <a href="tel:639-501-874-899" target="_blank" class="link">Phone</a>
-        </div>
-      </div>
-    </section>
+  <!--Main & Tab Content-->
+  <main>
+    <!--HOME-->
+    <div id="home" data-tab-content>
+      <h3>Hello there!</h3>
+      <h2>I am Daniel Cabasa</h2>
+      <h4>a web developer</h4><br>
+      
+      <button id="project-btn" data-tab-target="#projects">Go to Projects</button>
+    </div>
+
+    <!--PROJECTS-->
+    <div id="projects" class="active" data-tab-content>
+      <h3 class="title projects">PROJECTS</h3>
+      <ul>
+        <li>
+          <a class="link"href="https://cbsdan.github.io/Projects-MovieApp" target="_blank">
+            <div class="proj">
+              <p class="img-label">Movie App</p>
+              <img src="IMG THUMB/movieApp.png">
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="link"href="https://cbsdan.github.io/Projects-RecipeApp" target="_blank">
+            <div class="proj">
+              <p class="img-label">Recipe App</p>
+              <img src="IMG THUMB/recipeApp.png">
+            </div>
+          </a>
+        </li>
+        
+        <li>
+          <a class="link"href="https://cbsdan.github.io/Projects-NoteApp" target="_blank">
+            <div class="proj">
+              <p class="img-label">Note App</p>
+              <img src="IMG THUMB/noteApp.png">
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="link"href="https://cbsdan.github.io/Projects-DrawingApp" target="_blank">
+            <div class="proj">
+              <p class="img-label">Drawing App</p>
+              <img src="IMG THUMB/drawingApp.png">
+            </div>
+          </a>
+        </li>
+        
+        <li>
+          <a class="link"href="https://cbsdan.github.io/cbsdan-youtube" target="_blank">
+            <div class="proj">
+              <p class="img-label">Youtube Clone</p>
+              <img src="IMG THUMB/youtubeClone.png">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!--ABOUT-->
+    <div id="about" data-tab-content>
+      <h3 class="title">About</h3>
+      <p class="text">You can reach me here: </p>
+
+      <ul>
+        <li class="account">
+          <a class="link" href="https://www.facebook.com/daniel.cabasa.14" target="_blank">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </a>
+        </li>
+
+        <li class="account">
+          <a class="link" href="https://github.com/cbsdan" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </li>
+        
+        <li class="account">
+          <a class="link" href="mailto:cabasadaniel1@gmail.com">
+            <i class="fa-regular fa-envelope"></i> Gmail
+          </a>
+        </li>
+      </ul>
+
+    </div>
   </main>
 
-  <!--Footer. Other Info for the page-->
   <footer>
-    <hr>
-    <div class="footer-info">
-      <p id="web-info">All projects were learned and ideas from <a class="link" href="https://www.freecodecamp.org/" target="_blank">freecodecamp</a>.</p>
-      <p id="copyright"> &#169; Created for Final Requirement</p>
-    </div>
+
   </footer>
+
 </body>
 </html>

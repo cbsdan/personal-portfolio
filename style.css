@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  font-family: 'Poppins', Arial;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  background-color: white;
+  padding: 0.7rem 1rem;
+  width: 100vw;
+
+
+  box-shadow: 0 1px 20px 3px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1rem;
+
+  z-index: 10;
+}
+#dev {
+  color:rgb(227, 155, 0);
+}
+#menu {
+  display: inline-flex;
+  justify-content: start;
+  
+  width: 40px;
+  border: none;
+
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#menu > * {
+  width: 100%;
+  text-align: center;
+}
+
+
+nav {
+  display: flex;
+  justify-content: end;
+}
+nav ul {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 1.2rem;
+}
+.tab {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+.tab.active {
+  background-color: lightgray;
+}
+
+.tab:hover {
+  background-color: darkgray;
+}
+.navMenu.hidden {
+  display: none;
+
+}
+.navMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  
+}
+.navMenu ul {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.menu-tab {
+  font-size: 0.8rem;
+  padding: 0.25rem 1rem;
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.menu-tab:hover {
+  background-color: #434343;
+  color: white;
+}
+.menu-tab.active {
+  background-color: #a9a9a9;
+  color: white;
+}
+
+[data-tab-content] {
+  display: none;
+  color: black;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+main {
+  margin-top: 50px;
+  padding: 2rem;
+}
+
+#project-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(193, 133, 2);
+
+  background-color: transparent;
+  color: rgb(227, 155, 0);
+
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+#projects.active {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 40px;
+  max-width: 1200px;
+}
+h3.projects {
+  border-right: 5px solid green;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+h3.title {
+  color: green;
+}
+ul {
+  list-style: none;
+}
+a.link {
+  text-decoration: none;
+  color: black;
+}
+a.link:hover {
+  color: rgb(106, 140, 38);
+}
+
+#about {
+  color: green;
+}
+.text {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+
+
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.proj {
+  background-color: rgb(0, 146, 0);
+  width: 330px;
+  border-radius: 5px;
+}
+.proj:hover {
+  background-color:rgb(0, 78, 0) ;
+}
+.proj .img-label {
+  font-weight: 600;
+  text-align: start;
+  color: white;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.proj img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 501px) {
+  .label-cont {
+    text-align: start;
+  }
+  #dev {
+    text-align: start;
+  }
+  #menu {
+    display: none;
+  }
+  #home h3 {
+    font-size: 1.9rem;
+  }
+  #home h2 {
+    font-size: 2.3rem;
+  }
+  #home h4 {
+    font-size: 1.4rem;
+  }
+  h3.title {
+    font-size: 1.9rem;
+  }
+  a.link {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  nav {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  #dev {
+    text-align: end;
+  }
+  h3.title {
+    font-size: 1.5rem;
+  }
+  a.link {
+    font-size: 0.9rem;
+  }
+  #projects.active {
+    align-items: start;
+    justify-content: center;
+  }
+  .proj {
+    width: 250px;
+  }
+}
